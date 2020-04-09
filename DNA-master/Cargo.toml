@@ -1,0 +1,14 @@
+[workspace]
+default-members = [ "node/cli" ]
+members = [
+    "node/executor",
+    "node/runtime",
+    "node/cli",
+    "dna/assets",
+    "dna/exchange"
+]
+
+[profile.release]
+# Substrate runtime requires unwinding.
+panic = "unwind"
+incremental = true
